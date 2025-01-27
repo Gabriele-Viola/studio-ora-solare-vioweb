@@ -8,6 +8,7 @@ body {
   background-color: var(--color-bg-night);
   color: var(--color-fg-night);
   font-family: 'Satoshi', sans-serif;
+  overflow: hidden;
 
 }
 
@@ -44,36 +45,7 @@ header {
 /* #endregion color */
 
 
-/* #region nav bar */
-.nav {
-  display: flex;
-  justify-content: space-between;
-  padding: 0 .5rem;
-  text-transform: uppercase;
-}
 
-.leaft-Nav {
-  display: flex;
-  flex: 0 1 800px;
-  gap: 3rem;
-  justify-content: space-between;
-  list-style: none;
-  font-weight: 700;
-}
-
-.right-Nav {
-  list-style: none;
-  display: flex;
-  justify-content: end;
-  font-weight: 700;
-
-  li {
-    text-align: end;
-    width: calc(100% / 3);
-  }
-}
-
-/* #endregion nav bar */
 
 .info {
   width: 20%;
@@ -82,27 +54,37 @@ header {
   .city,
   .date,
   .switch {
-    width: 95%;
     background-color: #626262;
-    margin: auto;
-    margin-top: .5rem;
+    margin-top: .75rem;
     border-radius: .75rem;
+    padding: 1.5rem;
   }
 
   .double {
     display: flex;
-    margin-top: .5rem;
+    justify-content: space-between;
+    margin-top: .75rem;
 
     .party,
     .meteo {
-      width: 45%;
+      width: 50%;
+      width: calc(50% - (0.75rem / 2));
       height: 100px;
       background-color: #626262;
-      margin: auto;
       border-radius: .75rem;
+      position: relative;
+
+      span {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        padding: 1rem;
+      }
 
     }
   }
+
+
 }
 
 .otherInfo {
@@ -157,7 +139,7 @@ header {
 
   .card-info {
     width: 75%;
-    
+
     h4 {
       padding: 0 5rem .25rem .5rem;
     }

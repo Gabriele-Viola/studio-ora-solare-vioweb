@@ -1,0 +1,41 @@
+.nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 1rem;
+    text-transform: uppercase;
+}
+
+.leaft-Nav {
+    display: flex;
+    flex: 0 1 800px;
+    gap: 4rem;
+    justify-content: space-between;
+    list-style: none;
+    font-weight: 700;
+
+    li {
+
+        a {
+            text-decoration: none;
+            color: white;
+        }
+    }
+}
+
+.right-Nav {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    font-weight: 700;
+    gap: 4rem;
+
+    li {
+        text-align: end;
+        width: calc(100% / 3);
+
+        a {
+            text-decoration: none;
+            color: white;
+        }
+    }
+}
