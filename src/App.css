@@ -9,12 +9,14 @@ body {
   color: var(--color-fg-night);
   font-family: 'Satoshi', sans-serif;
   overflow: hidden;
+  height: 100vh;
 
 }
 
 img {
-  width: 3000px;
-  max-width: 100%;
+  width: 100px;
+  object-fit: cover;
+  border-radius: .5rem;
 }
 
 header {
@@ -47,7 +49,7 @@ header {
 
 
 
-.info {
+.widjet {
   width: 20%;
   padding: .5rem;
 
@@ -88,11 +90,15 @@ header {
 }
 
 .otherInfo {
-  width: 30%;
-  padding: 1rem;
+
+  padding: .5rem;
+  height: calc(100vh - 280px);
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+  position: relative;
 
   .card {
-    margin-bottom: .75rem;
+    margin: .75rem 0;
     font-size: .75rem;
     flex-grow: 1;
 
@@ -115,6 +121,37 @@ header {
       padding: 0 .5rem;
     }
   }
+}
+
+.otherInfo::-webkit-scrollbar {
+  display: none;
+}
+
+.scroll-section {
+  position: relative;
+  width: 30%;
+}
+
+.fade-top {
+  position: absolute;
+  width: 100%;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  height: 1.75rem;
+  background: linear-gradient(to bottom, #111111, rgba(255, 255, 255, 0));
+  pointer-events: none;
+}
+
+.fade-bottom {
+  position: absolute;
+  width: 100%;
+  z-index: 10;
+  bottom: 0;
+  left: 0;
+  height: 1.75rem;
+  background: linear-gradient(to top, #111111, rgba(255, 255, 255, 0));
+  pointer-events: none;
 }
 
 .card-header {

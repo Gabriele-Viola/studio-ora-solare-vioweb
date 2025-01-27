@@ -9,7 +9,7 @@ export default function Homepage() {
 
         <div className="container">
 
-            <div className="info">
+            <div className="widjet">
                 <div className="city">Milan, Italy</div>
                 <div className="date">
                     <div className="Hour">16.30</div>
@@ -25,35 +25,38 @@ export default function Homepage() {
                     </div>
                 </div>
             </div>
-            <div className="otherInfo">
-                {aboutUs.map((item, index) =>
-                    <div key={index} className="card">
-                        <div className="bodyCard">
-                            <p className='preTitle'>{item.name}</p>
-                            <h4>{item.title}</h4>
-                            <p className='description'>{item.description}</p>
-                        </div>
-                    </div>
-                )}
-                {project.map((item, index) =>
-                    <div key={index} className="card">
-                        <div className="bodyCard">
-                            <div className="card-header">
-                                <div className='preTitle'>{item.name}</div>
-                                <div className="category">{item.title}</div>
+            <div className="scroll-section">
+
+                <div className="fade-top"></div>
+                <div className="otherInfo">
+                    {aboutUs.map((item, index) =>
+                        <div key={index} className="card">
+                            <div className="bodyCard">
+                                <p className='preTitle'>{item.name}</p>
+                                <h4>{item.title}</h4>
+                                <p className='description'>{item.description}</p>
                             </div>
-                            <div className="card-body">
-                                <div className="card-img">
+                        </div>
+                    )}
+                    {project.map((item, index) =>
+                        <div key={index} className="card">
+                            <div className="bodyCard">
+                                <div className="card-header">
+                                    <div className='preTitle'>{item.name}</div>
+                                    <div className="category">{item.title}</div>
+                                </div>
+                                <div className="card-body">
                                     <img src={item.imgage} alt={item.title} />
-                                </div>
-                                <div className="card-info">
-                                    <h4>{item.title}</h4>
-                                    <p className='description'>{item.descriptio}</p>
+                                    <div className="card-info">
+                                        <h4>{item.title}</h4>
+                                        <p className='description'>{item.descriptio}</p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                )}
+                    )}
+                </div>
+                <div className="fade-bottom"></div>
             </div>
             <div className="show">
                 show all content
